@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Property Form (add / edit, shown inside a modal)
+   ========================================================================== */
+
+.pform {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* ---------- Sections ---------- */
+.pform-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.pform-legend {
+  width: 100%;
+  margin-bottom: var(--space-2);
+  padding-bottom: var(--space-3);
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  color: var(--color-navy-900);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* ---------- Rows ---------- */
+.pform-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.pform-optional {
+  font-weight: var(--fw-regular);
+  color: var(--text-muted);
+}
+
+.pform .form-select {
+  cursor: pointer;
+}
+
+/* ---------- Featured checkbox ---------- */
+.pform-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.pform-check input {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: var(--color-gold-600);
+  cursor: pointer;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 640px) {
+  .pform-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pform-row-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Favorites page
+   ========================================================================== */
+
+.favorites-section {
+  min-height: 50vh;
+  padding-top: var(--space-8);
+}
+
+/* ---------- Toolbar ---------- */
+.favorites-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.favorites-count {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+}
+
+.favorites-count strong {
+  color: var(--color-navy-900);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .favorites-section {
+    padding-top: var(--space-7);
+  }
+}

@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Newsletter
+   ========================================================================== */
+
+.newsletter-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.newsletter-eyebrow {
+  color: var(--color-gold-400);
+}
+
+.newsletter-title {
+  max-width: 600px;
+}
+
+.newsletter-text {
+  max-width: 520px;
+  margin-bottom: var(--space-4);
+}
+
+/* ---------- Form ---------- */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 560px;
+}
+
+.newsletter-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+  text-align: left;
+}
+
+.newsletter-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.newsletter-input-wrap svg {
+  position: absolute;
+  left: 1rem;
+  color: var(--color-gray-400);
+  pointer-events: none;
+}
+
+.newsletter-input {
+  width: 100%;
+  padding: 1.05rem 1rem 1.05rem 2.9rem;
+  font-size: var(--fs-base);
+  color: var(--color-navy-900);
+  background-color: var(--color-warm-white);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.newsletter-input::placeholder {
+  color: var(--color-gray-400);
+}
+
+.newsletter-input:focus {
+  border-color: var(--color-gold-500);
+  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.3);
+}
+
+.newsletter-input.has-error {
+  border-color: var(--color-danger);
+}
+
+.newsletter-error {
+  font-size: var(--fs-xs);
+  color: #f4a09c;
+}
+
+/* ---------- Success ---------- */
+.newsletter-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  max-width: 460px;
+  color: var(--color-gold-400);
+  animation: fadeUp 500ms var(--ease) both;
+}
+
+.newsletter-success p {
+  color: var(--text-on-dark-muted);
+}
+
+.newsletter-reset {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-gold-400);
+  border-bottom: 1px solid var(--color-gold-500);
+  padding-bottom: 2px;
+  transition: color var(--transition-fast);
+}
+
+.newsletter-reset:hover {
+  color: var(--color-warm-white);
+}
+
+/* ---------- Desktop: input and button on one row ---------- */
+@media (min-width: 640px) {
+  .newsletter-form {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}

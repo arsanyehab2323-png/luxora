@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Latest Properties
+   ========================================================================== */
+
+.latest {
+  background-color: var(--bg-body);
+}
+
+.latest-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 640px) {
+  .latest-footer {
+    margin-top: var(--space-7);
+  }
+
+  .latest-footer .btn {
+    width: 100%;
+  }
+}

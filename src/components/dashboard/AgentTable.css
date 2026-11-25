@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Dashboard Agent Table
+   (table, badge, and button styles are shared from PropertyTable.css)
+   ========================================================================== */
+
+.dash-agent-avatar {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid var(--color-gold-300);
+  border-radius: 50%;
+}
+
+.dash-agent-avatar-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  color: var(--color-gold-400);
+  background-color: var(--color-navy-900);
+  border-color: var(--color-navy-900);
+}

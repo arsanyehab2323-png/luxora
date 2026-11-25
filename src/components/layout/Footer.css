@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.footer {
+  padding-top: var(--space-9);
+  background-color: var(--color-navy-950);
+  color: var(--text-on-dark-muted);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  padding-bottom: var(--space-8);
+}
+
+/* ---------- Brand ---------- */
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  color: var(--color-warm-white);
+}
+
+.footer-logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-navy-900);
+  background-color: var(--color-gold-500);
+  border-radius: var(--radius-sm);
+}
+
+.footer-logo-text {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.22em;
+}
+
+.footer-tagline {
+  margin-bottom: var(--space-3);
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-style: italic;
+  color: var(--color-gold-400);
+}
+
+.footer-description {
+  max-width: 380px;
+  font-size: var(--fs-sm);
+  color: var(--text-on-dark-muted);
+}
+
+/* ---------- Social ---------- */
+.footer-social {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-warm-white);
+  border: 1px solid rgba(250, 248, 244, 0.2);
+  border-radius: 50%;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.footer-social-link:hover {
+  background-color: var(--color-gold-500);
+  border-color: var(--color-gold-500);
+  color: var(--color-navy-900);
+  transform: translateY(-3px);
+}
+
+/* ---------- Columns ---------- */
+.footer-heading {
+  margin-bottom: var(--space-5);
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--color-warm-white);
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer-link {
+  font-size: var(--fs-sm);
+  color: var(--text-on-dark-muted);
+  transition:
+    color var(--transition-fast),
+    padding-left var(--transition-base);
+}
+
+.footer-link:hover {
+  color: var(--color-gold-400);
+  padding-left: var(--space-2);
+}
+
+/* ---------- Contact ---------- */
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+}
+
+.footer-contact svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-gold-500);
+}
+
+/* ---------- Bottom bar ---------- */
+.footer-bottom {
+  padding-block: var(--space-5);
+  text-align: center;
+  border-top: 1px solid rgba(250, 248, 244, 0.1);
+}
+
+.footer-bottom p {
+  font-size: var(--fs-xs);
+  color: rgba(250, 248, 244, 0.5);
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 640px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+}

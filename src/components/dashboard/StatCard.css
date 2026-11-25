@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Dashboard Stat Card
+   ========================================================================== */
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.stat-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.stat-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+}
+
+.stat-card-icon-gold {
+  color: var(--color-gold-700);
+  background-color: var(--color-cream);
+}
+
+.stat-card-icon-navy {
+  color: var(--color-warm-white);
+  background-color: var(--color-navy-900);
+}
+
+.stat-card-icon-green {
+  color: var(--color-success);
+  background-color: var(--color-success-bg);
+}
+
+.stat-card-icon-blue {
+  color: var(--color-info);
+  background-color: var(--color-info-bg);
+}
+
+.stat-card-body {
+  min-width: 0;
+}
+
+.stat-card-value {
+  font-family: var(--font-heading);
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  color: var(--color-navy-900);
+}
+
+.stat-card-label {
+  margin-top: var(--space-1);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
+}
+
+.stat-card-hint {
+  margin-top: 2px;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-card:hover {
+    transform: none;
+  }
+}

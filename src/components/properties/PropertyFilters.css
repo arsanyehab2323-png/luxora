@@ -1,0 +1,263 @@
+/* ==========================================================================
+   Property Filters
+   ========================================================================== */
+
+.filters {
+  width: 100%;
+}
+
+/* ---------- Mobile toggle button ---------- */
+.filters-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: 0.95rem 1.1rem;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-navy-900);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xs);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.filters-toggle:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.filters-toggle-close {
+  margin-left: auto;
+  color: var(--text-muted);
+}
+
+.filters-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding-inline: 6px;
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-navy-900);
+  background-color: var(--color-gold-500);
+  border-radius: var(--radius-full);
+}
+
+/* ---------- Panel ---------- */
+.filters-panel {
+  display: none;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-top: var(--space-3);
+  padding: var(--space-5);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.filters-panel-open {
+  display: flex;
+  animation: fadeIn var(--transition-base) both;
+}
+
+/* ---------- Header ---------- */
+.filters-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.filters-title {
+  font-size: var(--fs-xl);
+}
+
+.filters-reset {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.4rem 0.7rem;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-gold-700);
+  border-radius: var(--radius-sm);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.filters-reset:hover:not(:disabled) {
+  background-color: var(--color-cream);
+}
+
+.filters-reset:disabled {
+  color: var(--color-gray-300);
+}
+
+/* ---------- Groups ---------- */
+.filters-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.filters-label {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.filters-input,
+.filters-select {
+  width: 100%;
+  min-width: 0;
+  padding: 0.75rem 0.9rem;
+  font-size: var(--fs-sm);
+  color: var(--text-primary);
+  background-color: var(--color-gray-50);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.filters-input::placeholder {
+  color: var(--color-gray-400);
+}
+
+.filters-input:focus,
+.filters-select:focus {
+  background-color: var(--bg-surface);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.2);
+}
+
+.filters-select {
+  cursor: pointer;
+}
+
+/* ---------- Location search with icon ---------- */
+.filters-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.filters-search svg {
+  position: absolute;
+  left: 0.85rem;
+  color: var(--color-gray-400);
+  pointer-events: none;
+}
+
+.filters-search .filters-input {
+  padding-left: 2.6rem;
+}
+
+/* ---------- Price range ---------- */
+.filters-range {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.filters-range-dash {
+  color: var(--text-muted);
+}
+
+.filters-hint {
+  font-size: var(--fs-xs);
+  line-height: var(--lh-snug);
+  color: var(--text-muted);
+}
+
+/* ---------- Bedroom / bathroom pickers ---------- */
+.filters-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.filters-count {
+  min-width: 44px;
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.filters-count:hover {
+  border-color: var(--color-gold-500);
+  color: var(--color-navy-900);
+}
+
+.filters-count.is-active {
+  color: var(--color-warm-white);
+  background-color: var(--color-navy-900);
+  border-color: var(--color-navy-900);
+}
+
+/* ---------- Footer ---------- */
+.filters-footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-color);
+}
+
+.filters-results {
+  font-size: var(--fs-sm);
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.filters-results strong {
+  color: var(--color-navy-900);
+}
+
+/* ---------- Desktop: sticky sidebar, always open ---------- */
+@media (min-width: 992px) {
+  .filters {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-5));
+    max-height: calc(100vh - var(--header-height) - var(--space-6));
+    overflow-y: auto;
+  }
+
+  .filters-toggle {
+    display: none;
+  }
+
+  .filters-panel {
+    display: flex;
+    margin-top: 0;
+  }
+
+  .filters-apply {
+    display: none;
+  }
+}

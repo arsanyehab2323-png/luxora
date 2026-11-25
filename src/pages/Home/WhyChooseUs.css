@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Why Choose Us
+   ========================================================================== */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+/* ---------- Card ---------- */
+.why-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  background-color: rgba(250, 248, 244, 0.04);
+  border: 1px solid rgba(250, 248, 244, 0.1);
+  border-radius: var(--radius-lg);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.why-card:hover {
+  background-color: rgba(250, 248, 244, 0.08);
+  border-color: rgba(201, 169, 110, 0.5);
+  transform: translateY(-6px);
+}
+
+.why-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: var(--space-2);
+  color: var(--color-gold-400);
+  border: 1px solid rgba(201, 169, 110, 0.5);
+  border-radius: 50%;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.why-card:hover .why-card-icon {
+  color: var(--color-navy-900);
+  background-color: var(--color-gold-500);
+}
+
+.why-card-title {
+  font-size: var(--fs-xl);
+  color: var(--color-warm-white);
+}
+
+.why-card-text {
+  font-size: var(--fs-sm);
+  color: var(--text-on-dark-muted);
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 640px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .why-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .why-card:hover {
+    transform: none;
+  }
+}

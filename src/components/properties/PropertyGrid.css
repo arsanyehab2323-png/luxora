@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Property Grid
+   ========================================================================== */
+
+.property-grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+
+/* ---------- Grid view: responsive columns ---------- */
+@media (min-width: 640px) {
+  .property-grid-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .property-grid-grid.property-grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------- List view: stacked rows ---------- */
+.property-grid-list {
+  grid-template-columns: 1fr;
+}
+
+/* ==========================================================================
+   Loading skeletons
+   ========================================================================== */
+
+.property-skeleton {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color-soft);
+  border-radius: var(--radius-lg);
+}
+
+.property-skeleton-media {
+  aspect-ratio: 4 / 3;
+  border-radius: 0;
+}
+
+.property-skeleton-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+}
+
+.property-skeleton-line {
+  height: 14px;
+}
+
+.property-skeleton-line-sm {
+  width: 30%;
+}
+
+.property-skeleton-line-md {
+  width: 55%;
+}
+
+.property-skeleton-line-lg {
+  width: 80%;
+  height: 22px;
+}
+
+.property-skeleton-line-full {
+  width: 100%;
+  margin-top: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .property-skeleton-list {
+    flex-direction: row;
+  }
+
+  .property-skeleton-list .property-skeleton-media {
+    flex: 0 0 38%;
+    aspect-ratio: auto;
+    min-height: 260px;
+  }
+
+  .property-skeleton-list .property-skeleton-body {
+    justify-content: center;
+    padding: var(--space-6);
+  }
+}

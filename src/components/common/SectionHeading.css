@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Section Heading
+   ========================================================================== */
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 720px;
+  margin-bottom: var(--space-8);
+}
+
+.section-heading-center {
+  align-items: center;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.section-heading-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.section-heading-eyebrow {
+  color: var(--accent-hover);
+}
+
+.section-heading-title {
+  color: var(--text-primary);
+}
+
+.section-heading-divider {
+  margin-block: var(--space-1);
+}
+
+.section-heading-description {
+  max-width: 600px;
+  font-size: var(--fs-md);
+  color: var(--text-secondary);
+}
+
+/* ---------- Light version (for dark backgrounds) ---------- */
+.section-heading-light .eyebrow {
+  color: var(--color-gold-400);
+}
+
+.section-heading-light .section-heading-title {
+  color: var(--text-on-dark);
+}
+
+.section-heading-light .section-heading-description {
+  color: var(--text-on-dark-muted);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .section-heading {
+    margin-bottom: var(--space-7);
+  }
+
+  .section-heading-description {
+    font-size: var(--fs-base);
+  }
+}

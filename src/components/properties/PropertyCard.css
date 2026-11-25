@@ -1,0 +1,260 @@
+/* ==========================================================================
+   Property Card
+   ========================================================================== */
+
+.property-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.property-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+}
+
+/* ---------- Media ---------- */
+.property-card-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--color-gray-100);
+}
+
+.property-card-image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.property-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 800ms var(--ease);
+}
+
+.property-card:hover .property-card-image {
+  transform: scale(1.06);
+}
+
+.property-card-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--color-gray-400);
+  background-color: var(--color-gray-100);
+}
+
+/* ---------- Status label ---------- */
+.property-status {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  padding: 0.4rem 0.85rem;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-navy-900);
+  border-radius: var(--radius-full);
+}
+
+.status-sale {
+  color: var(--color-navy-900);
+  background-color: var(--color-gold-500);
+}
+
+.status-rent {
+  color: var(--color-white);
+  background-color: var(--color-navy-700);
+}
+
+.status-sold {
+  color: var(--color-white);
+  background-color: var(--color-danger);
+}
+
+.status-rented {
+  color: var(--color-white);
+  background-color: var(--color-gray-600);
+}
+
+/* ---------- Favorite button ---------- */
+.property-card-favorite {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  color: var(--color-navy-900);
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.property-card-favorite:hover {
+  transform: scale(1.1);
+}
+
+.property-card-favorite.is-active {
+  color: var(--color-danger);
+}
+
+/* ---------- Body ---------- */
+.property-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+}
+
+.property-card-type {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--accent-hover);
+}
+
+.property-card-title {
+  font-size: var(--fs-xl);
+  line-height: var(--lh-snug);
+}
+
+.property-card-title a:hover {
+  color: var(--color-gold-700);
+}
+
+.property-card-location {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.property-card-location svg {
+  flex-shrink: 0;
+  color: var(--color-gold-600);
+}
+
+/* ---------- Specs ---------- */
+.property-card-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin-top: var(--space-2);
+  padding-block: var(--space-3);
+  border-block: 1px solid var(--border-color);
+}
+
+.property-card-specs li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+}
+
+.property-card-specs svg {
+  color: var(--color-gold-600);
+}
+
+/* ---------- Footer ---------- */
+.property-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: auto;
+  padding-top: var(--space-3);
+}
+
+.property-card-price {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  color: var(--color-navy-900);
+}
+
+.property-card-link {
+  position: relative;
+  flex-shrink: 0;
+  padding-block: var(--space-1);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-navy-900);
+}
+
+.property-card-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-gold-500);
+  transform: scaleX(0.35);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+}
+
+.property-card-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ==========================================================================
+   List view (wide row, used on the Properties page)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  .property-card-list {
+    flex-direction: row;
+  }
+
+  .property-card-list .property-card-media {
+    flex: 0 0 38%;
+    aspect-ratio: auto;
+    min-height: 260px;
+  }
+
+  .property-card-list .property-card-body {
+    justify-content: center;
+    padding: var(--space-6);
+  }
+
+  .property-card-list .property-card-title {
+    font-size: var(--fs-2xl);
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .property-card:hover {
+    transform: none;
+  }
+
+  .property-card:hover .property-card-image {
+    transform: none;
+  }
+}

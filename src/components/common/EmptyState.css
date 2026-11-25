@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Empty State
+   ========================================================================== */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  max-width: 480px;
+  margin-inline: auto;
+  padding: var(--space-9) var(--space-4);
+  text-align: center;
+}
+
+.empty-state-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  margin-bottom: var(--space-2);
+  color: var(--color-gold-600);
+  background-color: var(--color-cream);
+  border: 1px solid var(--color-gold-300);
+  border-radius: 50%;
+}
+
+.empty-state-title {
+  font-size: var(--fs-2xl);
+}
+
+.empty-state-message {
+  max-width: 380px;
+  margin-bottom: var(--space-2);
+}

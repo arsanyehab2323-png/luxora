@@ -1,0 +1,175 @@
+/* ==========================================================================
+   Dashboard Tables (shared styles for property and agent tables)
+   ========================================================================== */
+
+.dash-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.dash-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+}
+
+.dash-table th {
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--text-muted);
+  background-color: var(--color-gray-50);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dash-table td {
+  padding: var(--space-4) var(--space-5);
+  vertical-align: middle;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color-soft);
+}
+
+.dash-table tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+.dash-table tbody tr:hover {
+  background-color: var(--color-gray-50);
+}
+
+.dash-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.dash-table-actions-head {
+  text-align: right;
+}
+
+/* ---------- Property cell ---------- */
+.dash-table-property {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 240px;
+}
+
+.dash-table-thumb {
+  width: 64px;
+  height: 48px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.dash-table-thumb-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-400);
+  background-color: var(--color-gray-100);
+}
+
+.dash-table-property-text {
+  min-width: 0;
+}
+
+.dash-table-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: var(--fw-semibold);
+  color: var(--color-navy-900);
+}
+
+.dash-table-featured {
+  flex-shrink: 0;
+  color: var(--color-gold-500);
+  fill: var(--color-gold-500);
+}
+
+.dash-table-location {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.dash-table-price {
+  font-weight: var(--fw-semibold);
+  white-space: nowrap;
+  color: var(--color-navy-900);
+}
+
+/* ---------- Status badges ---------- */
+.dash-badge {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  white-space: nowrap;
+  color: var(--color-navy-900);
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-full);
+}
+
+.dash-badge-sale {
+  color: var(--color-gold-700);
+  background-color: var(--color-cream);
+}
+
+.dash-badge-rent {
+  color: var(--color-info);
+  background-color: var(--color-info-bg);
+}
+
+.dash-badge-sold {
+  color: var(--color-danger);
+  background-color: var(--color-danger-bg);
+}
+
+.dash-badge-rented {
+  color: var(--color-gray-600);
+  background-color: var(--color-gray-100);
+}
+
+/* ---------- Row actions ---------- */
+.dash-table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.dash-icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.dash-icon-button:hover {
+  color: var(--color-navy-900);
+  background-color: var(--color-cream);
+  border-color: var(--color-gold-500);
+}
+
+.dash-icon-button-danger:hover {
+  color: var(--color-danger);
+  background-color: var(--color-danger-bg);
+  border-color: var(--color-danger);
+}

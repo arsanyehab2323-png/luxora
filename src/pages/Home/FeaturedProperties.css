@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Featured Properties
+   ========================================================================== */
+
+.featured {
+  background-color: var(--bg-body);
+}
+
+.featured-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 640px) {
+  .featured-footer {
+    margin-top: var(--space-7);
+  }
+
+  .featured-footer .btn {
+    width: 100%;
+  }
+}

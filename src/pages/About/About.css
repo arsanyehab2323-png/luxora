@@ -1,0 +1,298 @@
+/* ==========================================================================
+   About page
+   ========================================================================== */
+
+/* ---------- Our story ---------- */
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.about-story-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--color-navy-900);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-story-fallback {
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 70% 30%, rgba(201, 169, 110, 0.3), transparent 55%),
+    var(--color-navy-900);
+}
+
+.about-story-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.about-story-heading {
+  margin-bottom: var(--space-2);
+}
+
+/* ---------- Mission and vision ---------- */
+.about-mv-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+.about-mv-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-7) var(--space-6);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color-soft);
+  border-top: 3px solid var(--color-gold-500);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-mv-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: var(--space-2);
+  color: var(--color-gold-700);
+  background-color: var(--color-cream);
+  border: 1px solid var(--color-gold-300);
+  border-radius: 50%;
+}
+
+.about-mv-title {
+  font-size: var(--fs-2xl);
+}
+
+/* ---------- Achievements ---------- */
+.about-achievements {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+.about-achievement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+  background-color: rgba(250, 248, 244, 0.04);
+  border: 1px solid rgba(250, 248, 244, 0.1);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.about-achievement:hover {
+  border-color: rgba(201, 169, 110, 0.5);
+  transform: translateY(-6px);
+}
+
+.about-achievement-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: var(--space-2);
+  color: var(--color-gold-400);
+  border: 1px solid rgba(201, 169, 110, 0.5);
+  border-radius: 50%;
+}
+
+.about-achievement-title {
+  font-size: var(--fs-xl);
+  color: var(--color-warm-white);
+}
+
+.about-achievement-text {
+  font-size: var(--fs-sm);
+  color: var(--text-on-dark-muted);
+}
+
+/* ---------- Values ---------- */
+.about-values {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.about-value {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-5);
+  border-top: 2px solid var(--color-gold-300);
+}
+
+.about-value-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  color: var(--color-navy-900);
+  background-color: var(--color-gold-500);
+  border-radius: var(--radius-md);
+}
+
+.about-value-title {
+  font-size: var(--fs-xl);
+}
+
+/* ---------- Team ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-align: center;
+}
+
+.team-card-media {
+  aspect-ratio: 1;
+  margin-bottom: var(--space-3);
+  overflow: hidden;
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.team-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 800ms var(--ease);
+}
+
+.team-card:hover .team-card-image {
+  transform: scale(1.05);
+}
+
+.team-card-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-heading);
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-semibold);
+  color: var(--color-gold-400);
+  background-color: var(--color-navy-900);
+}
+
+.team-card-name {
+  font-size: var(--fs-xl);
+}
+
+.team-card-role {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--accent-hover);
+}
+
+/* ---------- Call to action ---------- */
+.about-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.about-cta-title {
+  max-width: 560px;
+}
+
+.about-cta-inner p {
+  max-width: 520px;
+}
+
+.about-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 640px) {
+  .about-achievements {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-values {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-mv-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .about-story-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-9);
+  }
+
+  .about-achievements {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .about-values {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-cta-actions .btn {
+    width: 100%;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .about-achievement:hover,
+  .team-card:hover .team-card-image {
+    transform: none;
+  }
+}

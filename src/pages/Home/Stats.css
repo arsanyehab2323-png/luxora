@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Stats
+   ========================================================================== */
+
+.stats {
+  padding-block: var(--space-9);
+  background-color: var(--color-cream);
+  border-block: 1px solid var(--border-color-soft);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-7) var(--space-5);
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.stats-value {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, var(--fs-5xl));
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  color: var(--color-navy-900);
+}
+
+.stats-label {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--color-gold-700);
+}
+
+/* ---------- Divider lines between items on desktop ---------- */
+@media (min-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-5);
+  }
+
+  .stats-item + .stats-item {
+    border-left: 1px solid var(--color-gold-300);
+  }
+}
